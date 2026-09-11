@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akshat Mandalgi — YouTube Strategist</title>
+<meta name="description" content="Akshat Mandalgi — YouTube Strategist & Channel Manager. Strategy, ideas, scripts, retention, packaging and growth.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --bg:#f3f0e9;
+  --ink:#11110f;
+  --muted:#6e6b63;
+  --line:#c9c4b8;
+  --card:#e9e5dc;
+  --accent:#d8ff3e;
+  --red:#ff5b43;
+  --white:#fffdf7;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:Manrope,system-ui,sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;z-index:20;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(1220px,calc(100% - 44px));margin:auto}
+.mono{font:12px "DM Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:10;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 22px;mix-blend-mode:multiply;
+}
+.nav .mark{font-weight:800;font-size:14px}
+.navlinks{display:flex;gap:22px}
+.navlinks a{font-size:12px;font-family:"DM Mono",monospace;text-transform:uppercase}
+.navlinks a:hover{text-decoration:underline}
+.hero{min-height:100svh;padding:130px 0 70px;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:end}
+.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+.dot{width:9px;height:9px;background:var(--accent);border:1px solid var(--ink);border-radius:50%;display:inline-block}
+.hero h1{
+  margin:0;font-size:clamp(58px,9vw,132px);line-height:.86;
+  letter-spacing:-.075em;font-weight:800;max-width:950px;
+}
+.hero h1 span{display:block}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.hero-sub{font-size:18px;line-height:1.55;max-width:430px;margin:0 0 8px}
+.hero-note{font:12px "DM Mono",monospace;color:var(--muted);margin-top:26px}
+.scroll{display:inline-flex;align-items:center;gap:10px;margin-top:45px;font:12px "DM Mono",monospace;text-transform:uppercase}
+.scroll i{display:block;width:42px;height:1px;background:var(--ink)}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-block;padding:15px 0;animation:marquee 22s linear infinite}
+.ticker b{font-weight:500;margin:0 24px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+.section{padding:125px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;border-top:1px solid var(--line);padding-top:18px;margin-bottom:55px}
+.section-title{font-size:clamp(42px,6vw,80px);line-height:.92;letter-spacing:-.06em;margin:0;max-width:780px}
+.section-kicker{max-width:240px;color:var(--muted);font:12px "DM Mono",monospace;line-height:1.6;text-transform:uppercase}
+.proof{background:var(--ink);color:var(--white);padding:110px 0}
+.proof .section-head{border-color:#494842}
+.proof .section-kicker{color:#9d9b92}
+.proof-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px}
+.growth{border:1px solid #46453f;padding:36px;min-height:430px;display:flex;flex-direction:column;justify-content:space-between}
+.big-num{font-size:clamp(100px,15vw,210px);line-height:.75;letter-spacing:-.09em;font-weight:800}
+.big-num small{font-size:18px;letter-spacing:0;font-family:"DM Mono",monospace;font-weight:400}
+.timeline{display:flex;align-items:center;gap:16px;font:13px "DM Mono",monospace}
+.timeline .bar{height:1px;background:#77746a;flex:1;position:relative}
+.timeline .bar:after{content:"";position:absolute;right:0;top:-4px;width:8px;height:8px;background:var(--accent);border-radius:50%}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#46453f}
+.stat{background:var(--ink);border:1px solid #46453f;padding:30px;min-height:207px}
+.stat strong{font-size:54px;letter-spacing:-.06em;display:block}
+.stat span{font:12px "DM Mono",monospace;color:#aaa79e;text-transform:uppercase}
+.method{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.step{min-height:205px;background:var(--card);border:1px solid var(--line);padding:18px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}
+.step:hover{transform:translateY(-8px);background:var(--accent)}
+.step .num{font:11px "DM Mono",monospace}
+.step strong{font-size:20px;letter-spacing:-.03em}
+.step p{font-size:13px;line-height:1.45;color:var(--muted);margin:0}
+.step:hover p{color:var(--ink)}
+.retention{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}
+.retention-copy p{font-size:18px;line-height:1.6;color:#4e4b45}
+.graph-card{background:var(--white);border:1px solid var(--line);padding:25px;position:relative;overflow:hidden}
+.graph-head{display:flex;justify-content:space-between;margin-bottom:25px}
+.graph{height:370px;position:relative;background:
+  linear-gradient(to bottom,transparent 24.8%,#dedbd2 25%,transparent 25.2%,transparent 49.8%,#dedbd2 50%,transparent 50.2%,transparent 74.8%,#dedbd2 75%,transparent 75.2%),
+  linear-gradient(to right,#dedbd2 1px,transparent 1px);
+background-size:100% 100%,20% 100%;
+}
+.graph svg{width:100%;height:100%}
+.annotation{position:absolute;background:var(--ink);color:var(--white);padding:12px 14px;font:11px "DM Mono",monospace;line-height:1.4;max-width:170px}
+.a1{left:18%;top:22%}.a2{left:48%;top:49%}.a3{right:6%;top:18%}
+.cases{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.case{border:1px solid var(--line);background:var(--white);overflow:hidden;position:relative}
+.case:nth-child(2){margin-top:80px}
+.case:nth-child(3){margin-top:-30px}
+.case-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;filter:saturate(.94)}
+.case-body{padding:24px}
+.case-id{color:var(--muted);margin-bottom:16px}
+.case h3{font-size:31px;letter-spacing:-.05em;margin:0 0 14px}
+.case p{font-size:14px;line-height:1.55;color:var(--muted);margin:0 0 18px}
+.watch{display:inline-flex;align-items:center;gap:9px;font:11px "DM Mono",monospace;text-transform:uppercase}
+.watch:before{content:"↗";width:25px;height:25px;display:grid;place-items:center;border:1px solid var(--ink);border-radius:50%}
+.workbench{background:var(--card);padding:80px 0}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.work-grid figure{margin:0;background:var(--white);border:1px solid var(--line);padding:10px}
+.work-grid img{width:100%;display:block}
+.work-grid figcaption{padding:12px 4px 3px;font:10px "DM Mono",monospace;text-transform:uppercase;color:var(--muted)}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:60px}
+.about h2{font-size:clamp(45px,7vw,95px);line-height:.9;letter-spacing:-.07em;margin:0}
+.about-copy{font-size:21px;line-height:1.6;max-width:680px}
+.about-copy p{margin-top:0}
+.contact{background:var(--accent);padding:120px 0}
+.contact h2{font-size:clamp(65px,10vw,145px);line-height:.78;letter-spacing:-.08em;margin:0 0 55px;max-width:1000px}
+.contact-row{display:flex;justify-content:space-between;align-items:end;gap:20px}
+.contact-note{font:12px "DM Mono",monospace;max-width:330px;line-height:1.6}
+.fake-button{border:1px solid var(--ink);padding:17px 22px;font:12px "DM Mono",monospace;text-transform:uppercase;background:transparent}
+footer{padding:24px 0;display:flex;justify-content:space-between;font:11px "DM Mono",monospace;color:var(--muted)}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+.cursor{display:inline-block;width:9px;height:1em;background:var(--ink);vertical-align:-.1em;animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+
+@media(max-width:900px){
+  .navlinks{display:none}
+  .hero-grid,.proof-grid,.retention,.about{grid-template-columns:1fr}
+  .hero{padding-top:120px}
+  .method{grid-template-columns:repeat(2,1fr)}
+  .cases{grid-template-columns:1fr}
+  .case:nth-child(2),.case:nth-child(3){margin-top:0}
+  .work-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  .container{width:min(100% - 28px,1220px)}
+  .section{padding:85px 0}
+  .hero h1{font-size:17vw}
+  .section-head{display:block}
+  .section-kicker{margin-top:18px}
+  .stats{grid-template-columns:1fr}
+  .method{grid-template-columns:1fr}
+  .work-grid{grid-template-columns:1fr}
+  .contact-row,footer{display:block}
+  footer div+div{margin-top:8px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#" class="mark">AKSHAT / YOUTUBE</a>
+  <div class="navlinks">
+    <a href="#method">How I think</a>
+    <a href="#cases">Case files</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow mono"><span class="dot"></span> YouTube Strategist & Channel Manager</div>
+        <h1>
+          I DON'T MAKE
+          <span class="outline">YOUTUBE</span>
+          VIDEOS.
+          <span>I FIGURE OUT</span>
+          <span>WHY PEOPLE</span>
+          <span class="outline">WATCH THEM.</span>
+        </h1>
+      </div>
+      <div>
+        <p class="hero-sub">I talk about all things YouTube — from the first idea to the final retention curve.</p>
+        <div class="hero-note">STRATEGY / IDEATION / SCRIPT / RETENTION / PACKAGING / ANALYSIS</div>
+        <a class="scroll" href="#proof"><i></i> Enter the lab</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ticker">
+  <div class="ticker-track mono">
+    EXPERIMENT → MEASURE → LEARN → COMPOUND <b>✳</b>
+    EXPERIMENT → MEASURE → LEARN → COMPOUND <b>✳</b>
+    EXPERIMENT → MEASURE → LEARN → COMPOUND <b>✳</b>
+  </div>
+</div>
+
+<section class="section proof" id="proof">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">CASE FILE: ZERO1</h2>
+      <div class="section-kicker">End-to-end channel work.<br>Research through retrospective analysis.</div>
+    </div>
+    <div class="proof-grid reveal">
+      <div class="growth">
+        <div class="mono">SUBSCRIBERS / 23 MONTHS</div>
+        <div class="big-num">5.2<span style="font-size:.3em">×</span></div>
+        <div class="timeline"><span>150K</span><div class="bar"></div><span>780K</span></div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>96</strong><span>episodes, end to end</span></div>
+        <div class="stat"><strong>38M+</strong><span>organic long-form views</span></div>
+        <div class="stat"><strong>8</strong><span>videos crossed 1M+ views</span></div>
+        <div class="stat"><strong>53M+</strong><span>views from 120+ shorts written</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="method">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">THE YOUTUBE<br>WORKBENCH</h2>
+      <div class="section-kicker">Every release is an experiment. Every result becomes a hypothesis for the next one.</div>
+    </div>
+    <div class="method">
+      <div class="step reveal"><span class="num">01 / INPUT</span><strong>Research</strong><p>Primary + secondary research before an idea earns its place.</p></div>
+      <div class="step reveal"><span class="num">02 / SIGNAL</span><strong>Ideation</strong><p>Find the topic, angle and promise that deserve a click.</p></div>
+      <div class="step reveal"><span class="num">03 / BUILD</span><strong>Script</strong><p>Structure the story around Average View Duration.</p></div>
+      <div class="step reveal"><span class="num">04 / SHAPE</span><strong>Packaging</strong><p>Thumbnail wireframes and creative direction built together.</p></div>
+      <div class="step reveal"><span class="num">05 / RELEASE</span><strong>Direction</strong><p>Storyboard, shoot and direct so the idea survives production.</p></div>
+      <div class="step reveal"><span class="num">06 / LEARN</span><strong>Retrospective</strong><p>Study every release. Compound what worked.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="retention">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">THE WAY I<br>ANALYZE RETENTION<span class="cursor"></span></h2>
+      <div class="section-kicker">Not “the graph went down.”<br>What happened here — and what should change next?</div>
+    </div>
+    <div class="retention reveal">
+      <div class="retention-copy">
+        <p>Retention is where strategy becomes observable. I look for the moments where the promise, story or information density stops matching what the viewer expected.</p>
+        <p>Then I turn those observations into changes for the next video — not just a post-mortem.</p>
+      </div>
+      <div class="graph-card">
+        <div class="graph-head mono"><span>AUDIENCE RETENTION</span><span>VIDEO 042</span></div>
+        <div class="graph">
+          <svg viewBox="0 0 900 370" preserveAspectRatio="none" aria-label="Illustrative retention curve">
+            <path d="M0 48 C45 55 55 86 92 98 C125 110 145 122 180 132 C220 144 245 160 280 168 C325 180 350 175 385 204 C425 238 450 256 500 242 C540 230 560 270 610 280 C660 290 685 305 730 292 C780 278 815 312 900 324" fill="none" stroke="#11110f" stroke-width="5" stroke-linecap="round"/>
+            <circle cx="180" cy="132" r="7" fill="#d8ff3e" stroke="#11110f" stroke-width="2"/>
+            <circle cx="500" cy="242" r="7" fill="#d8ff3e" stroke="#11110f" stroke-width="2"/>
+            <circle cx="730" cy="292" r="7" fill="#d8ff3e" stroke="#11110f" stroke-width="2"/>
+          </svg>
+          <div class="annotation a1">00:17<br><b>HOOK DROP</b><br>Promise ≠ delivery.</div>
+          <div class="annotation a2">05:18<br><b>SPIKE</b><br>Viewer gets the payoff.</div>
+          <div class="annotation a3">07:42<br><b>QUESTION</b><br>Why did this segment hold?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="cases">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">CASE FILES</h2>
+      <div class="section-kicker">Selected work from the deck.<br>Click a piece to watch it.</div>
+    </div>
+    <div class="cases">
+      <article class="case reveal">
+        <img class="case-img" src="assets/image9.png" alt="YouTube thumbnail">
+        <div class="case-body"><div class="case-id mono">CASE 001 / LF</div><h3>Making the idea impossible to ignore.</h3><p>Long-form work across topic selection, storytelling and packaging.</p><a class="watch" href="https://youtu.be/pui5oqqUcRE" target="_blank">Watch work</a></div>
+      </article>
+      <article class="case reveal">
+        <img class="case-img" src="assets/image4.png" alt="YouTube thumbnail">
+        <div class="case-body"><div class="case-id mono">CASE 002 / LF</div><h3>Packaging is part of the story.</h3><p>Titles and thumbnails designed around the viewer's curiosity, not decoration.</p><a class="watch" href="https://youtu.be/HRVED93mXoY" target="_blank">Watch work</a></div>
+      </article>
+      <article class="case reveal">
+        <img class="case-img" src="assets/image8.png" alt="YouTube thumbnail">
+        <div class="case-body"><div class="case-id mono">CASE 003 / LF</div><h3>Turn the strategy into a watchable story.</h3><p>From the core idea to a finished long-form video.</p><a class="watch" href="https://youtu.be/wi8AGE0d63s" target="_blank">Watch work</a></div>
+      </article>
+      <article class="case reveal">
+        <img class="case-img" src="assets/image7.png" alt="YouTube thumbnail">
+        <div class="case-body"><div class="case-id mono">CASE 004 / LF</div><h3>Make every minute earn its place.</h3><p>Story structure engineered with attention and retention in mind.</p><a class="watch" href="https://youtu.be/x2HUrF27QGg" target="_blank">Watch work</a></div>
+      </article>
+      <article class="case reveal">
+        <img class="case-img" src="assets/image11.png" alt="YouTube thumbnail">
+        <div class="case-body"><div class="case-id mono">CASE 005 / CONSULTING</div><h3>Strategy when the channel is the product.</h3><p>YouTube consulting work focused on content decisions and growth.</p><a class="watch" href="https://youtu.be/sDbi_9DkQ18" target="_blank">Watch work</a></div>
+      </article>
+      <article class="case reveal">
+        <img class="case-img" src="assets/image14.png" alt="Dilnawaz YouTube thumbnail">
+        <div class="case-body"><div class="case-id mono">CASE 006 / DILNAWAZ</div><h3>Strategy → Script.</h3><p>A focused example of turning a channel strategy into a specific video.</p><a class="watch" href="https://youtu.be/kBHR4EBHQ90" target="_blank">Watch work</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="workbench">
+  <div class="container">
+    <div class="section-head">
+      <h2 class="section-title">THE<br>WORKBENCH</h2>
+      <div class="section-kicker">Thumbnails, ideas and finished work — the evidence behind the process.</div>
+    </div>
+    <div class="work-grid">
+      <figure><img src="assets/image10.png" alt="India's Gold Problem thumbnail"><figcaption>Packaging / Gold</figcaption></figure>
+      <figure><img src="assets/image12.png" alt="Money Trap thumbnail"><figcaption>Packaging / Gen Z</figcaption></figure>
+      <figure><img src="assets/image13.png" alt="No Cost EMIs thumbnail"><figcaption>Packaging / Consumer finance</figcaption></figure>
+      <figure><img src="assets/image5.png" alt="Mutual fund thumbnail"><figcaption>Packaging / Investing</figcaption></figure>
+      <figure><img src="assets/image2.png" alt="Silver Rally thumbnail"><figcaption>Packaging / Market story</figcaption></figure>
+      <figure><img src="assets/image6.png" alt="Money Trap thumbnail"><figcaption>Packaging / Behaviour</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="about reveal">
+      <div><div class="mono">ABOUT AKSHAT</div></div>
+      <div class="about-copy">
+        <h2>I THINK IN<br>VIDEOS.</h2>
+        <p>I’m Akshat Mandalgi, a YouTube Strategist & Channel Manager. My work sits at the intersection of research, storytelling, audience psychology and data.</p>
+        <p>I’ve worked across the full YouTube loop: finding the idea, building the script, shaping the thumbnail, directing the shoot, reading the retention curve and feeding the learning back into the next release.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="mono">THE NEXT EXPERIMENT</div>
+    <h2>GOT A CHANNEL<br>THAT SHOULD BE<br>GROWING FASTER?</h2>
+    <div class="contact-row">
+      <div class="contact-note">This portfolio is designed around one idea: don't just show the work. Show the thinking that made the work work.</div>
+      <div class="fake-button">Let's build something worth watching →</div>
+    </div>
+  </div>
+</section>
+
+<footer class="container">
+  <div>AKSHAT MANDALGI / YOUTUBE STRATEGIST</div>
+  <div>STRATEGY · STORY · RETENTION · GROWTH</div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+document.querySelectorAll('.step').forEach((el,i)=>{
+  el.style.transitionDelay = `${i*60}ms`;
+});
+</script>
+</body>
+</html>
